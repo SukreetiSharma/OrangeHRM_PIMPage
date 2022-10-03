@@ -1,15 +1,16 @@
 package PageFactory;
 
-import Pages.AddEmployeeReport;
-import Pages.FillReportDetails;
+import Pages.*;
 import org.openqa.selenium.WebDriver;
-import Pages.LoginPage;
 
 public class PageFactory {
     public static WebDriver driver;
     public LoginPage loginPage;
+    public Logout LogOutAdmin;
     public AddEmployeeReport add;
     public FillReportDetails AddDetails;
+    public AddEmployee Employee ;
+    public AddEmployeeDetails EmployeeDetails;
 
     public PageFactory(WebDriver driver){
         this.driver = driver;
@@ -21,6 +22,13 @@ public class PageFactory {
         }
         return loginPage;
     }
+    public Logout getUserAbleToLogout(){
+        if(LogOutAdmin == null){
+            LogOutAdmin = new Logout(driver);
+        }
+        return LogOutAdmin;
+    }
+
 
     public AddEmployeeReport getAddReport(){
         if(add == null){
@@ -34,5 +42,18 @@ public class PageFactory {
             AddDetails = new FillReportDetails(driver);
         }
         return AddDetails;
+    }
+
+    public AddEmployee getAddingEmployee(){
+        if(Employee == null){
+            Employee = new AddEmployee(driver);
+        }
+        return Employee;
+    }
+    public AddEmployeeDetails getEmployeeDetails(){
+        if(EmployeeDetails == null){
+            EmployeeDetails = new AddEmployeeDetails(driver);
+        }
+        return EmployeeDetails;
     }
 }

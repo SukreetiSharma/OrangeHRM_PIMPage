@@ -36,5 +36,4 @@ public class LoginPage {
         driver.findElement(password).sendKeys(prop.getProperty("PassWord"));
         driver.findElement(Login).click();
     }
-
 }

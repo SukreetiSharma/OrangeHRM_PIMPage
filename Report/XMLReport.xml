@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="44.532">
-    <testcase classname="To Add Employee Report" name="Verify user is able to add Employee Report" time="44.241">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="25.702">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify user is able to add Employee Report" time="13.488">
         <system-out><![CDATA[Given user is able to login and redirect to Pim page........................passed
 When Go to Employee Report Page to add Employee Report......................passed
 And Fill all Required Details to save Report................................passed
 Then Verify Employee Report is added and Logout.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add product" time="11.903">
+        <system-out><![CDATA[Given user is able to login and navigate to Pim page........................passed
+When Go to Employee Page to add Employee....................................passed
+And Fill all Required Details to add Employee...............................passed
+Then Verify Employee is added and Logout....................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
