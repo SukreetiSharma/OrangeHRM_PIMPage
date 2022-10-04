@@ -21,6 +21,7 @@ public class LoginPage {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
+
     public void loginPage(){
         try {
             prop = new Properties();

@@ -11,6 +11,7 @@ public class PageFactory {
     public FillReportDetails AddDetails;
     public AddEmployee Employee ;
     public AddEmployeeDetails EmployeeDetails;
+    public AddMethod ReportingMethod;
 
     public PageFactory(WebDriver driver){
         this.driver = driver;
@@ -22,13 +23,13 @@ public class PageFactory {
         }
         return loginPage;
     }
+
     public Logout getUserAbleToLogout(){
         if(LogOutAdmin == null){
             LogOutAdmin = new Logout(driver);
         }
         return LogOutAdmin;
     }
-
 
     public AddEmployeeReport getAddReport(){
         if(add == null){
@@ -50,10 +51,18 @@ public class PageFactory {
         }
         return Employee;
     }
+
     public AddEmployeeDetails getEmployeeDetails(){
-        if(EmployeeDetails == null){
-            EmployeeDetails = new AddEmployeeDetails(driver);
+                if(EmployeeDetails == null){
+                    EmployeeDetails = new AddEmployeeDetails(driver);
         }
         return EmployeeDetails;
+    }
+
+    public AddMethod getAddReportingMethod(){
+        if(ReportingMethod == null){
+            ReportingMethod = new AddMethod(driver);
+        }
+        return ReportingMethod;
     }
 }

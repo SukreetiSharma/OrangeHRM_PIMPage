@@ -11,3 +11,9 @@ Feature: To Test The Functionality of PIM Page
     When Go to Employee Page to add Employee
     And Fill all Required Details to add Employee
     Then Verify Employee is added and Logout
+
+    Scenario: Verify User is able to add reporting method
+      Given User is able to Login and navigate to Pim page
+      When Go to Configuration and redirect to Reporting method Page
+      And Add reporting  method and fill all required Details
+      Then Verify Reporting method is Added and Logout

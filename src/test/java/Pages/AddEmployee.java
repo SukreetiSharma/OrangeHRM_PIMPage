@@ -15,6 +15,7 @@ public class AddEmployee {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
+
     public void AddingEmployee(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(AddEmployee));
         driver.findElement(AddEmployee).click();

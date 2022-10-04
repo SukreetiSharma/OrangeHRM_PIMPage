@@ -21,10 +21,12 @@ public class FillReportDetails {
     By Save = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']");
     By Admin = By.xpath("//p[@class='oxd-userdropdown-name']");
     By Logout = By.xpath("//a[contains(text(),'Logout')]");
+
     public FillReportDetails(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
+
     public void fillDetails() throws IOException {
         String s = RandomStringUtils.randomAlphabetic(8);
         driver.findElement(ReportName).sendKeys("Report"+s);

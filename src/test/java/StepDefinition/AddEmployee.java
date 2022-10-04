@@ -12,18 +12,21 @@ public class AddEmployee extends BaseClass {
       setup();
       obj.getUserAbleToLogin().loginPage();
     }
+
     @When("Go to Employee Page to add Employee")
     public void go_to_employee_page_to_add_employee() {
         obj.getAddingEmployee().AddingEmployee();
     }
+
     @When("Fill all Required Details to add Employee")
     public void fill_all_required_details_to_add_employee() throws IOException {
         obj.getEmployeeDetails().addDetails();
     }
+
     @Then("Verify Employee is added and Logout")
     public void verify_employee_is_added_and_logout() {
         obj.getEmployeeDetails().Verify();
         obj.getUserAbleToLogout().LogOutAdmin();
-        obj.getUserAbleToLogout().closeBrowser();
+        close();
     }
 }

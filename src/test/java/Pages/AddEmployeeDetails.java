@@ -43,6 +43,7 @@ public class AddEmployeeDetails {
         driver.findElement(Lname).sendKeys(LastName);
         driver.findElement(Save).click();
     }
+
     public void Verify(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(Fname));
         String actual = driver.findElement(Fname).getAttribute("value");
