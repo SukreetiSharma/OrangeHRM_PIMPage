@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="105.107">
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify user is able to add Employee Report" time="51.894">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="85.836">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify user is able to add Employee Report" time="16.356">
         <system-out><![CDATA[Given user is able to login and redirect to Pim page........................passed
 When Go to Employee Report Page to add Employee Report......................passed
 And Fill all Required Details to save Report................................passed
 Then Verify Employee Report is added and Logout.............................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add Employee" time="24.662">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add Employee" time="11.127">
         <system-out><![CDATA[Given user is able to login and navigate to Pim page........................passed
 When Go to Employee Page to add Employee....................................passed
 And Fill all Required Details to add Employee...............................passed
 Then Verify Employee is added and Logout....................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add reporting method" time="28.134">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given User is able to Login and navigate to Pim page........................passed
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add reporting method" time="43.508">
+        <system-out><![CDATA[Given User is able to Login and navigate to Pim page........................passed
 When Go to Configuration and redirect to Reporting method Page..............passed
-And Add reporting  method and fill all required Details.....................undefined
-Then Verify Reporting method is Added and Logout............................skipped
-]]></failure>
+And Add reporting  method and fill all required Details.....................passed
+Then Verify Reporting method is Added and Logout............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify user able to delete Employee" time="14.423">
+        <system-out><![CDATA[Given User is able to login and navigate to Pim page........................passed
+When Click on delete Button.................................................passed
+Then Verify User is deleted.................................................passed
+]]></system-out>
     </testcase>
 </testsuite>

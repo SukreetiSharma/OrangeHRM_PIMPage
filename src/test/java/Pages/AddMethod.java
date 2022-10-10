@@ -1,6 +1,5 @@
 package Pages;
 
-import net.jodah.failsafe.internal.util.Assert;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,8 +27,8 @@ public class AddMethod {
         driver.findElement(Config).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Method));
         driver.findElement(Method).click();
-
     }
+
     public void AddDetails(){
 
         driver.findElement(Add).click();
@@ -37,6 +36,7 @@ public class AddMethod {
         driver.findElement(Name).sendKeys(MethodName);
         driver.findElement(Save).click();
     }
+    
     public void Verify(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(verify));
     }

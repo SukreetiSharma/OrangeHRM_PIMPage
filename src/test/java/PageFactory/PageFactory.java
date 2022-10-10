@@ -12,6 +12,7 @@ public class PageFactory {
     public AddEmployee Employee ;
     public AddEmployeeDetails EmployeeDetails;
     public AddMethod ReportingMethod;
+    public DeleteEmployee DeleteEmply;
 
     public PageFactory(WebDriver driver){
         this.driver = driver;
@@ -64,5 +65,12 @@ public class PageFactory {
             ReportingMethod = new AddMethod(driver);
         }
         return ReportingMethod;
+    }
+
+    public DeleteEmployee getDeleteEmployee(){
+        if(DeleteEmply == null){
+            DeleteEmply = new DeleteEmployee(driver);
+        }
+        return DeleteEmply;
     }
 }
