@@ -10,7 +10,7 @@ public class AddEmployeeReport extends BaseClass {
     @Given("user is able to login and redirect to Pim page")
     public void user_is_able_to_login_and_redirect_to_pim_page(){
         setup();
-        obj.getUserAbleToLogin().loginPage();
+        loginPage();
     }
 
     @When("Go to Employee Report Page to add Employee Report")
@@ -20,11 +20,12 @@ public class AddEmployeeReport extends BaseClass {
 
     @When("Fill all Required Details to save Report")
     public void fill_all_required_details_to_save_report() throws IOException {
-        obj.getDetailsOfReports().fillDetails();
+        obj.getAddReport().fillDetails();
     }
 
     @Then("Verify Employee Report is added and Logout")
     public void verify_employee_report_is_added_and_logout() {
+        LogOutAdmin();
         close();
     }
 

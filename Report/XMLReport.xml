@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="85.836">
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify user is able to add Employee Report" time="16.356">
-        <system-out><![CDATA[Given user is able to login and redirect to Pim page........................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="119.108">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify user is able to add Employee Report" time="24.582">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[@class='oxd-userdropdown-name']&quot;}&#10;  (Session info: chrome=105.0.5195.127)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.0', revision: '87802e897b'&#10;System info: host: 'MSDT124', ip: '10.20.20.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [ef3602bea450451698673fda8f488bc4, findElement {using=xpath, value=//p[@class='oxd-userdropdown-name']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\SUKREE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56798}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56798/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: ef3602bea450451698673fda8f488bc4" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user is able to login and redirect to Pim page........................passed
 When Go to Employee Report Page to add Employee Report......................passed
 And Fill all Required Details to save Report................................passed
-Then Verify Employee Report is added and Logout.............................passed
-]]></system-out>
+Then Verify Employee Report is added and Logout.............................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[@class='oxd-userdropdown-name']"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'MSDT124', ip: '10.20.20.153', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ef3602bea450451698673fda8f488bc4, findElement {using=xpath, value=//p[@class='oxd-userdropdown-name']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\SUKREE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56798}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56798/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ef3602bea450451698673fda8f488bc4
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at BaseClass.BaseClass.LogOutAdmin(BaseClass.java:58)
+	at StepDefinition.AddEmployeeReport.verify_employee_report_is_added_and_logout(AddEmployeeReport.java:28)
+	at ✽.Verify Employee Report is added and Logout(file:///C:/Users/SukreetiSharma/Documents/GitHub/OrangeHRM_PIMPage/src/test/java/Features/PIMPage.feature:7)
+]]></failure>
     </testcase>
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add Employee" time="11.127">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add Employee" time="32.458">
         <system-out><![CDATA[Given user is able to login and navigate to Pim page........................passed
 When Go to Employee Page to add Employee....................................passed
 And Fill all Required Details to add Employee...............................passed
 Then Verify Employee is added and Logout....................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add reporting method" time="43.508">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify User is able to add reporting method" time="30.735">
         <system-out><![CDATA[Given User is able to Login and navigate to Pim page........................passed
 When Go to Configuration and redirect to Reporting method Page..............passed
 And Add reporting  method and fill all required Details.....................passed
 Then Verify Reporting method is Added and Logout............................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="To Test The Functionality of PIM Page" name="Verify user able to delete Employee" time="14.423">
+    <testcase classname="To Test The Functionality of PIM Page" name="Verify user able to delete Employee" time="30.964">
         <system-out><![CDATA[Given User is able to login and navigate to Pim page........................passed
 When Click on delete Button.................................................passed
 Then Verify User is deleted.................................................passed

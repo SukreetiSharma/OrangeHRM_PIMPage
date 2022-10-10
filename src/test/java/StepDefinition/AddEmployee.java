@@ -10,7 +10,7 @@ public class AddEmployee extends BaseClass {
     @Given("user is able to login and navigate to Pim page")
     public void user_is_able_to_login_and_navigate_to_pim_page() {
       setup();
-      obj.getUserAbleToLogin().loginPage();
+      loginPage();
     }
 
     @When("Go to Employee Page to add Employee")
@@ -20,13 +20,13 @@ public class AddEmployee extends BaseClass {
 
     @When("Fill all Required Details to add Employee")
     public void fill_all_required_details_to_add_employee() throws IOException {
-        obj.getEmployeeDetails().addDetails();
+        obj.getAddingEmployee().addDetails();
     }
 
     @Then("Verify Employee is added and Logout")
     public void verify_employee_is_added_and_logout() {
-        obj.getEmployeeDetails().Verify();
-        obj.getUserAbleToLogout().LogOutAdmin();
+        obj.getAddingEmployee().Verify();
+//        LogOutAdmin();
         close();
     }
 }

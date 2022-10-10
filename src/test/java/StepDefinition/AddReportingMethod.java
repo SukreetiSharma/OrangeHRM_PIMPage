@@ -9,7 +9,7 @@ public class AddReportingMethod extends BaseClass {
     @Given("User is able to Login and navigate to Pim page")
     public void user_is_able_to_login_and_navigate_to_pim_page() {
         setup();
-        obj.getUserAbleToLogin().loginPage();
+        loginPage();
     }
 
     @When("Go to Configuration and redirect to Reporting method Page")
@@ -25,6 +25,7 @@ public class AddReportingMethod extends BaseClass {
     @Then("Verify Reporting method is Added and Logout")
     public void verify_reporting_method_is_added_and_logout() {
         obj.getAddReportingMethod().Verify();
+        LogOutAdmin();
         close();
     }
 }

@@ -18,7 +18,7 @@ Feature: To Test The Functionality of PIM Page
       And Add reporting  method and fill all required Details
       Then Verify Reporting method is Added and Logout
 
-      Scenario: Verify user able to delete Employee
-        Given User is able to login and navigate to Pim page
-        When Click on delete Button
-        Then Verify User is deleted
+   Scenario: Verify user able to delete Employee
+     Given User is able to login and navigate to Pim page
+     When Click on delete Button
+     Then Verify User is deleted

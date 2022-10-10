@@ -13,7 +13,7 @@ public class AddMethod {
     String s = RandomStringUtils.randomAlphabetic(8);
     String MethodName = s + " method";
     By Config = By.xpath("//span[@class='oxd-topbar-body-nav-tab-item']");
-    By Method = By.xpath("(//a[@class='oxd-topbar-body-nav-tab-link'])[4]");
+    By Method = By.xpath("//li//a[contains(text(),'Reporting Methods')]");
     By Add = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']");
     By Name = By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]");
     By Save = By.xpath("//button[@type='submit']");
